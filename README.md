@@ -7,7 +7,7 @@ Runtime OAuth and tools are hosted by ClickClarity (`https://clickclarity.ai/api
 | Path | Purpose |
 |------|---------|
 | [`click-clarity-ai/`](./click-clarity-ai/) | Claude plugin bundle (submit this folder to [claude.ai/directory/manage](https://claude.ai/directory/manage)) |
-| [`chatgpt/`](./chatgpt/) | ChatGPT Custom GPT instructions + OpenAPI notes |
+| [`chatgpt/`](./chatgpt/) | ChatGPT directory ZIP (`click-clarity-ai.zip`) + Custom GPT helpers |
 
 ## Claude directory submission
 
@@ -21,6 +21,14 @@ Runtime OAuth and tools are hosted by ClickClarity (`https://clickclarity.ai/api
 ```bash
 claude plugin validate ./click-clarity-ai
 ```
+
+## ChatGPT plugin directory submission
+
+1. Upload [`chatgpt/click-clarity-ai.zip`](./chatgpt/click-clarity-ai.zip) in the OpenAI Plugins dashboard (**Upload new or existing plugin**).
+2. Connect MCP `https://clickclarity.ai/api/plugin/mcp` (OAuth client id `chatgpt`; secret only in the dashboard).
+3. Do **not** put a `plugin_asdk_app…` local app ID in the public ZIP — that ID is for Plugin Creator / local testing only.
+
+Details: [`chatgpt/README.md`](./chatgpt/README.md).
 
 ## Local monorepo checkout
 
