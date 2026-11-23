@@ -19,5 +19,10 @@
     "marketing",
     "shopify",
     "hubspot"
-  ]
+  ],
+  "icon": "./icon.png",
+  "privacyPolicyUrl": "https://clickclarity.ai/privacy",
+  "termsOfServiceUrl": "https://clickclarity.ai/terms",
+  "supportUrl": "https://clickclarity.ai",
+  "documentationUrl": "https://github.com/click-clarity-ai/ai-plugins/blob/main/click-clarity-ai/README.md"
 }
