@@ -1,0 +1,32 @@
+{
+  "_comment": "Prefer importing live OpenAPI from {AI_PLUGIN_PUBLIC_BASE_URL}/plugin/openapi.json so servers and OAuth URLs stay correct per environment.",
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ClickClarity Co-Worker Plugin",
+    "version": "1.0.0"
+  },
+  "servers": [{ "url": "https://dev.clickclarity.ai/api" }],
+  "paths": {
+    "/plugin/v1/workspace": {
+      "get": { "operationId": "getWorkspaceStatus", "responses": { "200": { "description": "ok" } } }
+    },
+    "/plugin/v1/tools": {
+      "get": { "operationId": "listTools", "responses": { "200": { "description": "ok" } } }
+    },
+    "/plugin/v1/tools/{toolName}": {
+      "post": {
+        "operationId": "callTool",
+        "parameters": [
+          { "name": "toolName", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "ok" } }
+      }
+    },
+    "/plugin/v1/skills": {
+      "get": { "operationId": "listSkills", "responses": { "200": { "description": "ok" } } }
+    },
+    "/plugin/v1/instructions": {
+      "get": { "operationId": "getInstructions", "responses": { "200": { "description": "ok" } } }
+    }
+  }
+}

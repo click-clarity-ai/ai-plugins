@@ -1,0 +1,23 @@
+{
+  "name": "click-clarity-ai",
+  "displayName": "Click Clarity AI",
+  "version": "1.0.0",
+  "description": "Connect Claude to your ClickClarity workspace over OAuth. Live Meta, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence tools—read-only analytics for your connected accounts.",
+  "author": {
+    "name": "Click Clarity AI",
+    "email": "support@clickclarity.ai",
+    "url": "https://clickclarity.ai"
+  },
+  "homepage": "https://clickclarity.ai",
+  "repository": "https://github.com/click-clarity-ai/ai-plugins",
+  "license": "Proprietary",
+  "keywords": [
+    "analytics",
+    "meta-ads",
+    "google-ads",
+    "ga4",
+    "marketing",
+    "shopify",
+    "hubspot"
+  ]
+}

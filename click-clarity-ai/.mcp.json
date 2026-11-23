@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "clickclarity": {
+      "type": "http",
+      "url": "https://clickclarity.ai/api/plugin/mcp"
+    }
+  }
+}
