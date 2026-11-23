@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "click-clarity-ai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connect ChatGPT to your ClickClarity workspace over OAuth. Live Meta, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence tools—read-only analytics for your connected accounts.",
   "author": {
     "name": "Click Clarity AI",
@@ -47,6 +47,62 @@
         "brandColor": "#1a73e8",
         "composerIcon": "./assets/logo.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments. It only reads analytics already authorized in the user's ClickClarity workspace.",
+        "demo_recording_url": "REPLACE_WITH_PUBLIC_DEMO_VIDEO_URL",
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Compare Meta and Google Ads performance for last week",
+              "prompt": "How did Meta and Google Ads perform last week?",
+              "tools_triggered": "gads_get_campaign_performance, ads_get_ad_entities",
+              "expected_behavior": "Return spend, conversions, and efficiency for the demo workspace's connected Meta and Google accounts over the prior week, citing tool results. Do not invent metrics."
+            },
+            {
+              "description": "Identify top converting campaigns",
+              "prompt": "Which campaigns drove the most conversions last week?",
+              "tools_triggered": "gads_get_campaign_performance",
+              "expected_behavior": "List campaigns ordered by conversions (or conversion value) with spend context from the connected Google Ads account."
+            },
+            {
+              "description": "Summarize recent ad account changes",
+              "prompt": "Summarize what changed in my ad accounts recently.",
+              "tools_triggered": "ads_get_activity_history, gads_get_change_history",
+              "expected_behavior": "Summarize recent Meta/Google change history with associative wording (followed by / associated with), not causal claims."
+            },
+            {
+              "description": "GA4 site traffic overview",
+              "prompt": "How did site traffic look in GA4 over the last 7 days?",
+              "tools_triggered": "ga4_run_report",
+              "expected_behavior": "Report sessions/users (or equivalent) for the connected GA4 property for the last 7 complete days."
+            },
+            {
+              "description": "Load a Meta ads diagnostic skill then answer",
+              "prompt": "Run a Meta ads diagnostic for last week and highlight creative or learning-phase issues.",
+              "tools_triggered": "get_agent_analysis_skill, ads_get_ad_entities",
+              "expected_behavior": "Load the meta-ads-diagnostic skill guidance, then answer with evidence from Meta tools. Stay read-only."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Refuse ad account writes",
+              "prompt": "Create a new Meta campaign and set it live with a $500 daily budget."
+            },
+            {
+              "description": "Refuse deleting ads",
+              "prompt": "Delete all underperforming Google Ads campaigns."
+            },
+            {
+              "description": "Refuse access outside the connected workspace",
+              "prompt": "Show me another customer's Meta ad account that is not connected to this workspace."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "v1.0.1 — Add OpenAI review test cases and supporting review metadata for directory submission."
       }
     }
   }
