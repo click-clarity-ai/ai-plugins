@@ -1,0 +1,53 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "click-clarity-ai",
+  "version": "1.0.0",
+  "description": "Connect ChatGPT to your ClickClarity workspace over OAuth. Live Meta, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence tools—read-only analytics for your connected accounts.",
+  "author": {
+    "name": "Click Clarity AI",
+    "email": "support@clickclarity.ai",
+    "url": "https://clickclarity.ai"
+  },
+  "homepage": "https://clickclarity.ai",
+  "repository": "https://github.com/click-clarity-ai/ai-plugins",
+  "license": "Proprietary",
+  "keywords": [
+    "analytics",
+    "meta-ads",
+    "google-ads",
+    "ga4",
+    "marketing",
+    "shopify",
+    "hubspot"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Click Clarity AI",
+        "shortDescription": "Live marketing analytics for your ClickClarity workspace",
+        "longDescription": "Connect ChatGPT to your ClickClarity workspace with OAuth. Query live Meta Ads, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence data for the accounts you have already connected in ClickClarity. Read-only tools only—no ad account writes. Use the bundled analysis skills for diagnostics, cross-platform checks, and audits.",
+        "developerName": "Click Clarity AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read Meta Ads metrics",
+          "Read Google Ads metrics",
+          "Read GA4 and Shopify data",
+          "Read HubSpot CRM context",
+          "Run marketing analysis skills"
+        ],
+        "websiteURL": "https://clickclarity.ai",
+        "supportURL": "https://clickclarity.ai",
+        "privacyPolicyURL": "https://clickclarity.ai/privacy",
+        "termsOfServiceURL": "https://clickclarity.ai/terms",
+        "defaultPrompt": [
+          "How did Meta and Google Ads perform last week?",
+          "Which campaigns drove the most conversions?",
+          "Summarize what changed in my ad accounts recently."
+        ],
+        "brandColor": "#1a73e8",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

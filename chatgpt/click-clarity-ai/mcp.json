@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "clickclarity": {
+      "type": "streamable-http",
+      "url": "https://clickclarity.ai/api/plugin/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "provided",
+              "clientId": "chatgpt",
+              "tokenEndpointAuthMethod": "client_secret_basic"
+            },
+            "authorizationUrl": "https://clickclarity.ai/api/plugin/oauth/authorize",
+            "tokenUrl": "https://clickclarity.ai/api/plugin/oauth/token",
+            "baseScopes": [
+              "plugin:mcp",
+              "plugin:tools",
+              "plugin:skills",
+              "workspace:read"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
