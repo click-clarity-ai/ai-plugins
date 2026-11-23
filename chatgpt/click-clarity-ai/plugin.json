@@ -24,7 +24,7 @@
     "com.openai": {
       "interface": {
         "displayName": "Click Clarity AI",
-        "shortDescription": "Live marketing analytics for your ClickClarity workspace",
+        "shortDescription": "Live ClickClarity analytics",
         "longDescription": "Connect ChatGPT to your ClickClarity workspace with OAuth. Query live Meta Ads, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence data for the accounts you have already connected in ClickClarity. Read-only tools only—no ad account writes. Use the bundled analysis skills for diagnostics, cross-platform checks, and audits.",
         "developerName": "Click Clarity AI",
         "category": "Productivity",
