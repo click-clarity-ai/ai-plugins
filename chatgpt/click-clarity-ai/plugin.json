@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "click-clarity-ai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Connect ChatGPT to your ClickClarity workspace over OAuth. Live Meta, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence tools—read-only analytics for your connected accounts.",
   "author": {
     "name": "Click Clarity AI",
@@ -24,19 +24,19 @@
     "com.openai": {
       "interface": {
         "displayName": "Click Clarity AI",
-        "shortDescription": "Live ClickClarity analytics",
-        "longDescription": "ClickClarity is a marketing data and analytics connector for ChatGPT. Connect your ClickClarity workspace with OAuth, then query live Meta Ads, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence data for the accounts you already connected in ClickClarity. Primary purpose: read-only performance analytics, reporting, and investigation across ad and site data—no ad account writes. Use the bundled analysis skills for diagnostics, cross-platform checks, and audits.",
+        "shortDescription": "Ads and analytics data",
+        "longDescription": "Primary purpose: Data & Analytics for marketers. ClickClarity connects ChatGPT to your existing ClickClarity workspace (OAuth) so you can analyze live advertising and site performance—Meta Ads, Google Ads, GA4, Shopify, HubSpot CRM context, and Change Intelligence—for accounts you already authorized inside ClickClarity. This is not an unofficial Meta/Google pass-through; ChatGPT talks only to ClickClarity. Tools are read-only (no ad account writes). Bundled skills help with diagnostics, cross-platform analysis, and audits.",
         "developerName": "Click Clarity AI",
         "category": "Data & Analytics",
         "capabilities": [
-          "Read Meta Ads metrics",
-          "Read Google Ads metrics",
-          "Read GA4 and Shopify data",
-          "Read HubSpot CRM context",
-          "Run marketing analysis skills"
+          "Analyze Meta Ads performance data",
+          "Analyze Google Ads performance data",
+          "Analyze GA4 and Shopify metrics",
+          "Read HubSpot CRM analytics context",
+          "Run marketing data analysis skills"
         ],
         "websiteURL": "https://clickclarity.ai",
-        "supportURL": "https://clickclarity.ai",
+        "supportURL": "https://clickclarity.ai/privacy",
         "privacyPolicyURL": "https://clickclarity.ai/privacy",
         "termsOfServiceURL": "https://clickclarity.ai/terms",
         "defaultPrompt": [
@@ -102,7 +102,7 @@
         }
       },
       "publication": {
-        "release_notes": "v1.0.2 — Category Data & Analytics; crawlable privacy/terms URLs for directory metadata checks."
+        "release_notes": "v1.0.3 — Privacy policy aligned to OpenAI §4.1 (data categories, recipients, retention, controls); listing clarified as Data & Analytics."
       }
     }
   }
