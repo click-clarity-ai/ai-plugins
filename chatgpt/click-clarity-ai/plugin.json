@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "click-clarity-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect ChatGPT to your ClickClarity workspace over OAuth. Live Meta, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence tools—read-only analytics for your connected accounts.",
   "author": {
     "name": "Click Clarity AI",
@@ -25,9 +25,9 @@
       "interface": {
         "displayName": "Click Clarity AI",
         "shortDescription": "Live ClickClarity analytics",
-        "longDescription": "Connect ChatGPT to your ClickClarity workspace with OAuth. Query live Meta Ads, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence data for the accounts you have already connected in ClickClarity. Read-only tools only—no ad account writes. Use the bundled analysis skills for diagnostics, cross-platform checks, and audits.",
+        "longDescription": "ClickClarity is a marketing data and analytics connector for ChatGPT. Connect your ClickClarity workspace with OAuth, then query live Meta Ads, Google Ads, GA4, Shopify, HubSpot, and Change Intelligence data for the accounts you already connected in ClickClarity. Primary purpose: read-only performance analytics, reporting, and investigation across ad and site data—no ad account writes. Use the bundled analysis skills for diagnostics, cross-platform checks, and audits.",
         "developerName": "Click Clarity AI",
-        "category": "Productivity",
+        "category": "Data & Analytics",
         "capabilities": [
           "Read Meta Ads metrics",
           "Read Google Ads metrics",
@@ -102,7 +102,7 @@
         }
       },
       "publication": {
-        "release_notes": "v1.0.1 — Add OpenAI review test cases and supporting review metadata for directory submission."
+        "release_notes": "v1.0.2 — Category Data & Analytics; crawlable privacy/terms URLs for directory metadata checks."
       }
     }
   }
